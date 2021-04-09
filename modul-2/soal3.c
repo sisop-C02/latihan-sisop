@@ -53,22 +53,18 @@ int main() {
 
     strcpy(source_file, dir);
     strcat(source_file, source);
-    printf("file1: %s\n", source_file);
     input = fopen(source_file, "r+");
 
     if (input == NULL) {
-        printf("gagal file1\n");
         return 0;
     }
 
     strcpy(destination_file, dir);
     strcat(destination_file, destination);
     strcat(destination_file, file_num);
-    printf("file2: %s\n", destination_file);
     output = fopen(destination_file, "w");
 
     if (output == NULL) {
-        printf("gagal file2\n");
         fclose(input);
         return 0;
     }
